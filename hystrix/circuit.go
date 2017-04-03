@@ -186,3 +186,8 @@ func (circuit *CircuitBreaker) ReportEvent(eventTypes []string, start time.Time,
 
 	return nil
 }
+
+// GetMetrics returns CircuitBreaker.metrics property
+func (circuit *CircuitBreaker) GetMetrics() (metrics *metricExchange) {
+	return circuit.metrics
+}
